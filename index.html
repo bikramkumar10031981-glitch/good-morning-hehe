@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Preity 💗🎀</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { min-height: 100vh; overflow-x: hidden; display: flex; justify-content: center; align-items: center; padding: 25px 0; font-family: "Trebuchet MS", sans-serif; background: linear-gradient(135deg,#ffe0ec,#f7c5e5,#e4d5ff); color: #a52d61; }
+.card { position: relative; z-index: 2; width: 88%; max-width: 440px; padding: 35px 25px; text-align: center; border: 1px solid #ffffffb5; border-radius: 30px; background: #ffffff85; backdrop-filter: blur(12px); box-shadow: 0 15px 45px #b34d7830; animation: appear 1.5s ease; }
+.heart { font-size: 65px; animation: heartbeat 1.3s infinite; }
+h1 { font-size: 34px; margin: 12px 0; color: #e84d91; text-shadow: 0 2px 12px #ffb3d2; }
+.subtitle { font-size: 13px; letter-spacing: 3px; color: #bd6393; margin-bottom: 15px; }
+p { font-size: 15px; line-height: 1.9; margin: 15px 0; color: #87405f; }
+button { margin-top: 15px; padding: 13px 23px; border: none; border-radius: 30px; background: linear-gradient(135deg,#ff78a5,#d980f5); color: white; font-size: 15px; font-weight: bold; cursor: pointer; box-shadow: 0 5px 20px #e989b755; transition: transform 0.3s; }
+button:hover { transform: scale(1.06); }
+#surprise { display: none; animation: appear 1s ease; }
+.name { font-size: 25px; font-weight: bold; color: #ed5098; }
+.signature { font-size: 13px; opacity: 0.8; margin-top: 22px; }
+.floating-heart { position: fixed; bottom: -40px; pointer-events: none; animation: floatUp linear forwards; z-index: 1; }
+@keyframes heartbeat { 0%,100% { transform: scale(1); } 50% { transform: scale(1.15); } }
+@keyframes appear { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes floatUp { to { transform: translateY(-115vh) rotate(360deg); opacity: 0; } }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="heart">💗</div>
+  <div class="subtitle">A LITTLE GIFT FOR</div>
+  <h1>PREITY 🎀</h1>
+  <p class="name">My Princess ♡</p>
+  <p>To the girl who makes my world sweeter just by being in it. 🥹💕<br>This little website is made with so much love, just for YOU.</p>
+  <button onclick="showLove()">Open Your Surprise 💌</button>
+  <div id="surprise">
+    <p>HAPPY ONE MONTH TO USSS, MYYY PREITYYYY!! 💗🧸<br><br>MYYYY CHIKKIII, MYYY RAVENN, MYYY PRINCESSS AND MYYY EVERYTHINGGG! 🎀💞<br><br>You make my days brighter and my heart happier. Even though we haven't met yet, what we share means so much to me. 🥹💗<br><br>I hope we keep laughing together, supporting each other, making beautiful memories, and choosing each other every single day. ♾️💕<br><br>PREITY, YOU ARE SOOO SPECIAL TO MEEE!! NEVER FORGET HOW MUCH YOU ARE LOVEDDD. 💖<br><br>I LOVEEEE YOUUU SOOO MUCHHH!!<br><br>MUWAAAAAAAHHHH!! 💋💗<br>FOREVER MY FAVOURITE PERSONN. 🎀</p>
+  </div>
+  <div class="signature">made with love, only for Preity ♡</div>
+</div>
+<script>
+function showLove() {
+  document.getElementById("surprise").style.display = "block";
+  document.querySelector("button").textContent = "PREITY IS SO LOVED 💖";
+  for (let i = 0; i < 35; i++) setTimeout(createHeart, i * 80);
+}
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.className = "floating-heart";
+  const hearts = ["💗", "💕", "💖", "💘", "🎀", "✨"];
+  heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.animationDuration = (3 + Math.random() * 4) + "s";
+  heart.style.fontSize = (16 + Math.random() * 22) + "px";
+  document.body.appendChild(heart);
+  setTimeout(() => heart.remove(), 7000);
+}
+setInterval(createHeart, 650);
+</script>
+</body>
+</html>
